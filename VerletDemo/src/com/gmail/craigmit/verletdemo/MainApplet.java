@@ -4,7 +4,6 @@ import java.awt.AWTEvent;
 import java.awt.Event;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
-import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JApplet;
@@ -45,8 +44,8 @@ import javax.swing.JApplet;
 public class MainApplet extends JApplet implements Runnable {
 	static final int FPS = 30;
 	static final int SECOND_TO_NANOSECOND = 1000000000;
-	static final int SCREEN_WIDTH = 480;
-	static final int SCREEN_HEIGHT = 320;
+	static final int SCREEN_WIDTH = 600;
+	static final int SCREEN_HEIGHT = 450;
 	
 	/**
 	 * The vertex that is currently dragged around with the mouse
@@ -79,8 +78,7 @@ public class MainApplet extends JApplet implements Runnable {
 		        		mouseY = ((MouseEvent)e).getY();
 	        		}
 	        		else {
-	        			// World.new PhysicsBody(4).CreatkeBox( ((MouseEvent)e).getX() - 25, ((MouseEvent)e).getY() - 25, 50, 50 );
-	        			new PhysicsBody(world, 1).createBox( world, ((MouseEvent)e).getX() - 15, ((MouseEvent)e).getY() - 30, 30, 60 );
+	        			new PhysicsBody(world, 1).createBox( world, ((MouseEvent)e).getX() - 20, ((MouseEvent)e).getY() - 30, 40, 60 );
 	        		}
 	        	}
 	        	break;
@@ -153,7 +151,8 @@ public class MainApplet extends JApplet implements Runnable {
 
 			// Sets the position of the DragVertex to the mouse position to drag it around
         	if( dragVertex != null ) {
-        		dragVertex.position = new Point2D.Float(mouseX, mouseY);
+        		dragVertex.position.x = mouseX;
+        		dragVertex.position.y = mouseY;
         	}
 			
 			// Update
