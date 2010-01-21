@@ -6,7 +6,8 @@ import java.awt.geom.Point2D;
  * <p>Original C++ code written by Benedikt Bitterli Copyright (c) 2009
  * <p>Original C++ code and tutorial available at {@link http://www.gamedev.net/reference/programming/features/verletPhys/default.asp}.
  * <p>Conversion from C++ to Java done by Craig Mitchell Copyright (c) 2010.
- * 
+ * <p>
+ * <pre>
  * The code is released under the ZLib/LibPNG license.
  * It basically means that you can treat the source in any way you like (including commercial applications),
  * but you may not claim that you wrote it.
@@ -28,6 +29,7 @@ import java.awt.geom.Point2D;
  *        misrepresented as being the original software.
  *        
  *     3. This notice may not be removed or altered from any source distribution.
+ * </pre>
  * 
  * @author Craig Mitchell
  * @since 21/01/2010
